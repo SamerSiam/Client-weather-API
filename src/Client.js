@@ -4,7 +4,7 @@ import axios from "axios";
 const Client = () => {
   const [data, setData] = useState([]);
   const [search, setSearch] = useState([]);
-  const URL = `http://localhost:3001/weather?address=${search}`;
+  const URL = `/weather?address=${search}`;
 
   const [errorMsg, setErrorMsg] = useState("");
   const cancelTokenSource = axios.CancelToken.source();
