@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
-
+const SERVER_URL = "https://fierce-temple-72245.herokuapp.com/";
 const Client = () => {
   const [data, setData] = useState([]);
   const [search, setSearch] = useState([]);
-  const URL = `/weather?address=${search}`;
+  const URL = `${SERVER_URL}/weather?address=${search}`;
 
   const [errorMsg, setErrorMsg] = useState("");
   const cancelTokenSource = axios.CancelToken.source();
